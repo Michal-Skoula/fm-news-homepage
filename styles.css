@@ -51,8 +51,7 @@ Very dark blue: hsl(240, 100%, 5%)
 }
 body{
     width:90vw;
-    min-height:300vh;
-    margin:3rem auto 0 auto;
+    margin:3rem auto 3rem auto;
     font-family: 'Inter', sans-serif;
     background-color: var(--background);
 }
@@ -203,10 +202,14 @@ nav a:hover{
 }
 
 @media(width < 500px) {
+    body{
+        width:100%;
+    }
     .hero{
         grid-template-columns: 1fr;
     }
     .main-article-area{
+        display:grid;
         grid-template-columns: 1fr;
     }
 }
