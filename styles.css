@@ -65,6 +65,8 @@ nav a:hover{
 }
 .main-article-thumbnail img{
     width:100%;
+    height: 100%;
+    object-fit:cover;
 }
 .main-article-text-area{
     display:grid;
@@ -94,13 +96,13 @@ nav a:hover{
     font-weight: 800;
     font-size:20px;
     letter-spacing: 5px;
-    padding:1rem;
     display:grid;
     align-self:self-end;
-    padding:1rem 3rem 1rem 3rem;
+    padding:1rem;
     cursor:pointer; 
     transition: background-color 0.4s;
     text-transform: uppercase;
+    min-width:50%;
 }
 .main-article-text-area button:hover{
     background-color:var(--hover-color)
@@ -163,7 +165,8 @@ nav a:hover{
 }
 .articles img {
     width:100%;
-    vertical-align: top;
+    height:100%;
+    object-fit:cover;
 }
 .article-text-area{
     display:grid;
@@ -187,13 +190,13 @@ nav a:hover{
     font-size:18px;
     color:var(--highlight-text-gray);
 }
-@media(width < 1200px) and (width > 800px)  {
+@media(width < 1200px) and (width > 700px)  {
     .articles{
         grid-template-columns: 1fr;
-        grid-template-rows:7fr 4fr
+        grid-template-rows:7fr 4fr;
     }
 }
-@media(width < 800px) {
+@media(width < 700px) {
     .main-article-thumbnail {
         display:grid;
     }
@@ -216,7 +219,7 @@ nav a:hover{
         margin-bottom:2rem;
     }
     .articles{
-        grid-template-columns: 1fr 3fr;
+        grid-template-columns: 40% 60%;
     }
     .new-articles{
         grid-template-columns: 1fr;
